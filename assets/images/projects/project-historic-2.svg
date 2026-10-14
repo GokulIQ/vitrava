@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17272E" />
+      <stop offset="60%" stop-color="#0E1B20" />
+      <stop offset="100%" stop-color="#087D8C" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDEFEA" stop-opacity="0.25" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#087D8C" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="citronGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D8EC8C" />
+      <stop offset="100%" stop-color="#B2CE55" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#DCE5E5" stroke-opacity="0.07" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+  <rect width="800" height="600" fill="url(#grid)" />
+
+  <!-- Visual Graphics -->
+  
+      <g transform="translate(180, 80)">
+        <rect x="40" y="40" width="360" height="200" rx="6" fill="#422518" stroke="#344950" stroke-width="6" />
+        <rect x="60" y="60" width="140" height="160" fill="url(#glassGrad)" />
+        <rect x="240" y="60" width="140" height="160" fill="url(#glassGrad)" />
+        <text x="220" y="280" font-family="sans-serif" font-size="14" font-weight="700" fill="#D8EC8C" text-anchor="middle">LANDMARK PRESERVATION COMMISSION APPROVED</text>
+      </g>
+    
+
+  <!-- Lower Architectural Overlay Panel -->
+  <rect x="24" y="490" width="752" height="86" rx="12" fill="#17272E" fill-opacity="0.85" stroke="#344950" stroke-width="1.5" />
+  
+  <!-- Badge -->
+  <rect x="40" y="504" width="140" height="24" rx="12" fill="url(#citronGrad)" />
+  <text x="110" y="520" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#17272E" text-anchor="middle" letter-spacing="0.5">HERITAGE DETAIL</text>
+
+  <!-- Title & Subtitle -->
+  <text x="40" y="555" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="700" fill="#F1F7F5">Precision Timber-Clad Thermal Frame</text>
+  <text x="40" y="570" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#ADC0C3">Exterior extruded aluminum shield with interior solid mahogany trim</text>
+</svg>

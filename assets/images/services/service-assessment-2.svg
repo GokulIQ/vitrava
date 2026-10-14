@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17272E" />
+      <stop offset="60%" stop-color="#0E1B20" />
+      <stop offset="100%" stop-color="#087D8C" stop-opacity="0.8" />
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#DDEFEA" stop-opacity="0.25" />
+      <stop offset="40%" stop-color="#FFFFFF" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#087D8C" stop-opacity="0.3" />
+    </linearGradient>
+    <linearGradient id="citronGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D8EC8C" />
+      <stop offset="100%" stop-color="#B2CE55" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#DCE5E5" stroke-opacity="0.07" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+  <rect width="800" height="600" fill="url(#grid)" />
+
+  <!-- Visual Graphics -->
+  
+      <g transform="translate(160, 60)">
+        <rect x="0" y="0" width="480" height="340" rx="8" fill="#1A2D35" stroke="#D9383A" stroke-width="6" />
+        <circle cx="240" cy="170" r="110" fill="#0E1B20" stroke="#344950" stroke-width="8" />
+        <!-- Fan Blades -->
+        <path d="M 240 170 L 210 90 A 90 90 0 0 1 270 90 Z" fill="#087D8C" />
+        <path d="M 240 170 L 310 210 A 90 90 0 0 1 280 260 Z" fill="#087D8C" />
+        <path d="M 240 170 L 170 240 A 90 90 0 0 1 150 190 Z" fill="#087D8C" />
+        <circle cx="240" cy="170" r="30" fill="#D8EC8C" />
+        <text x="240" y="315" font-family="sans-serif" font-size="13" font-weight="700" fill="#ADC0C3" text-anchor="middle">TARGET: &lt; 0.05 CFM/FT² ENVELOPE SEAL</text>
+      </g>
+    
+
+  <!-- Lower Architectural Overlay Panel -->
+  <rect x="24" y="490" width="752" height="86" rx="12" fill="#17272E" fill-opacity="0.85" stroke="#344950" stroke-width="1.5" />
+  
+  <!-- Badge -->
+  <rect x="40" y="504" width="116" height="24" rx="12" fill="url(#citronGrad)" />
+  <text x="98" y="520" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="11" font-weight="700" fill="#17272E" text-anchor="middle" letter-spacing="0.5">ENERGY AUDIT</text>
+
+  <!-- Title & Subtitle -->
+  <text x="40" y="555" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="19" font-weight="700" fill="#F1F7F5">Blower Door Air Leakage Diagnostics</text>
+  <text x="40" y="570" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#ADC0C3">Calibrated multipoint CFM50 whole-envelope air leakage testing</text>
+</svg>

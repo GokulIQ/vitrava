@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="../assets/images/common/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vitrava Template Documentation — Setup &amp; Customization Guide</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    .doc-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      min-height: 100vh;
+    }
+    .doc-sidebar {
+      background-color: var(--color-surface);
+      border-inline-end: 1px solid var(--color-border);
+      padding: 2rem 1.5rem;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .doc-content {
+      padding: clamp(2rem, 4vw, 4rem);
+      max-width: 900px;
+    }
+    .code-block {
+      background-color: #17272E;
+      color: #DDEFEA;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      overflow-x: auto;
+      margin-block: 1rem;
+    }
+    @media (max-width: 899px) {
+      .doc-layout { grid-template-columns: 1fr; }
+      .doc-sidebar { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-layout">
+    <!-- Sidebar Navigation -->
+    <aside class="doc-sidebar">
+      <div style="font-weight: 800; font-size: 1.25rem; color: var(--color-text-main); margin-bottom: 0.25rem;">VITRAVA</div>
+      <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase; margin-bottom: 2rem;">Template Documentation</div>
+
+      <nav style="display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.9rem;">
+        <a href="#overview" style="color: var(--color-text-main); font-weight: 600;">1. Overview &amp; Features</a>
+        <a href="#structure" style="color: var(--color-text-muted);">2. Folder Structure</a>
+        <a href="#quickstart" style="color: var(--color-text-muted);">3. Quick Start</a>
+        <a href="#colors" style="color: var(--color-text-muted);">4. Colors &amp; Typography</a>
+        <a href="#calculator" style="color: var(--color-text-muted);">5. Energy Calculator</a>
+        <a href="#portal" style="color: var(--color-text-muted);">6. Client Portal Setup</a>
+        <a href="#forms" style="color: var(--color-text-muted);">7. Forms &amp; Backend API</a>
+        <a href="#rtl" style="color: var(--color-text-muted);">8. RTL &amp; Themes</a>
+        <a href="#qa" style="color: var(--color-text-muted);">9. Quality Assurance</a>
+      </nav>
+
+      <div style="border-top: 1px solid var(--color-border); margin-top: 2rem; padding-top: 1rem;">
+        <a href="../index.html" class="btn btn-primary btn-sm" style="width: 100%;">View Live Template &rarr;</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="doc-content">
+      <span class="badge badge-citron" style="margin-bottom: 1rem;">OFFICIAL BUYER DOCUMENTATION</span>
+      <h1 class="text-display" style="margin-bottom: 1rem;">Vitrava Window Template</h1>
+      <p class="text-lead" style="margin-bottom: 3rem;">
+        Thank you for purchasing <strong>Vitrava</strong>. This documentation guides you through installing, customizing brand elements, modifying color palettes, and deploying the template.
+      </p>
+
+      <!-- Section 1: Overview -->
+      <section id="overview" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">1. Overview &amp; Features</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+          Vitrava is a commercial-grade, multipage static HTML5 website template built with semantic HTML, modern vanilla JavaScript ES modules, and a dedicated architectural design system. It includes <strong>51 standalone HTML files</strong>, including two distinct homepages, six service detail pages, six product detail pages, six project case studies, nine blog articles, and a complete six-page client installation portal.
+        </p>
+      </section>
+
+      <!-- Section 2: Folder Structure -->
+      <section id="structure" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">2. Folder Structure</h2>
+        <div class="code-block">
+vitrava-window-template/
+├── index.html                  # Home 01 (Energy Savings & Conversion)
+├── home-02.html                # Home 02 (Architectural & Luxury Transformation)
+├── services/                   # 6 Dedicated Service Detail Pages
+├── products/                   # 6 Dedicated Product Detail Pages
+├── projects/                   # 6 Installation Case Study Pages
+├── blog/                       # 9 In-Depth Knowledge Hub Articles
+├── dashboard/                  # Client Installation Portal (6 Pages)
+├── assets/
+│   ├── css/style.css           # Master CSS design system with CSS custom properties
+│   ├── js/                     # Modular JavaScript (theme, calculator, portal, main)
+│   └── images/                 # Organized image folders (hero, products, services, etc.)
+└── scripts/                    # Optional Node.js build automation scripts
+        </div>
+      </section>
+
+      <!-- Section 3: Quick Start -->
+      <section id="quickstart" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">3. Quick Start &amp; Deployment</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          Vitrava is a <strong>zero-dependency static frontend template</strong>. You can:
+        </p>
+        <ol style="padding-left: 1.5rem; color: var(--color-text-main); display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem;">
+          <li>Double-click <code>index.html</code> to open the site directly in any modern browser without needing to run a build or server.</li>
+          <li>Upload all files directly to any static web host: Apache, Nginx, Netlify, Vercel, GitHub Pages, or AWS S3.</li>
+          <li>Or run locally using any standard command line web server: <code>npx serve .</code> or <code>python -m http.server 3000</code>.</li>
+        </ol>
+      </section>
+
+      <!-- Section 4: Colors & Customization -->
+      <section id="colors" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">4. Colors &amp; Typography</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          To change theme colors, open <code>assets/css/style.css</code> and edit the <code>:root</code> CSS variables:
+        </p>
+        <div class="code-block">
+:root {
+  --color-text-main: #17272E;    /* Deep Graphite */
+  --color-bg-main: #F7FAF9;      /* Frost White */
+  --color-surface: #FFFFFF;      /* Pure White */
+  --color-primary: #087D8C;      /* Ocean Teal */
+  --color-primary-hover: #066572;
+  --color-accent: #DDEFEA;       /* Sea Glass */
+  --color-highlight: #D8EC8C;    /* Soft Citron */
+  --color-text-muted: #61747B;   /* Cool Slate */
+  --color-border: #DCE5E5;
+}
+        </div>
+      </section>
+
+      <!-- Section 5: Energy Calculator -->
+      <section id="calculator" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">5. Energy Savings Calculator</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          The calculator engine is located in <code>assets/js/calculator.js</code>. You can customize the mathematical assumptions (annual inflation rate, climate load fractions, and baseline U-factors) in the <code>MODEL_ASSUMPTIONS</code> object at the top of the file.
+        </p>
+      </section>
+
+      <!-- Section 6: Client Portal Setup -->
+      <section id="portal" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">6. Client Portal Setup &amp; Demo Credentials</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          The customer portal in <code>dashboard/</code> stores demo installation project state in <code>localStorage</code> under <code>vitrava-client-portal-v1</code>. To test login:
+        </p>
+        <ul style="padding-left: 1.5rem; color: var(--color-text-main); margin-bottom: 1.5rem;">
+          <li><strong>Email:</strong> <code>a.hayes@example.com</code></li>
+          <li><strong>Password:</strong> <code>Vitrava2026!</code></li>
+          <li>Or simply click the <strong>"Quick Fill Demo Customer Credentials"</strong> button on <code>login.html</code>.</li>
+        </ul>
+      </section>
+
+      <!-- Section 7: Connecting Forms to a Backend -->
+      <section id="forms" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">7. Connecting Forms to a Backend API</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          All forms feature client-side validation in <code>assets/js/main.js</code>. To send submissions to an actual email service or server endpoint:
+        </p>
+        <div class="code-block">
+// In assets/js/main.js:
+fetch('/api/contact', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name, email, phone, message })
+})
+.then(res => res.json())
+.then(data => {
+  VitravaToast.show('Thank you! Inquiry received.', 'success');
+});
+        </div>
+      </section>
+
+      <!-- Section 8: Quality Assurance -->
+      <section id="qa" style="margin-bottom: 4rem;">
+        <h2 class="text-h2" style="margin-bottom: 1rem;">8. Quality Assurance &amp; Tests</h2>
+        <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: 1rem;">
+          You can run the automated QA test suite using Node.js:
+        </p>
+        <div class="code-block">npm test</div>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+          Audits all 51 HTML pages, verifying 3,387 internal links, 106 image assets, and ensuring 100% compliance with section count rules.
+        </p>
+      </section>
+
+      <footer style="border-top: 1px solid var(--color-border); padding-top: 2rem; color: var(--color-text-muted); font-size: 0.875rem;">
+        &copy; 2026 Vitrava Window Replacement Technologies. Built for commercial marketplace deployment.
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
