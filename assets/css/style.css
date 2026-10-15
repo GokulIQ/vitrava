@@ -3671,6 +3671,37 @@ span.testimonial-avatar {
   color: var(--color-text-main);
 }
 
+/* Keep the residential service hero legible and easy to tap on phones. */
+@media (max-width: 600px) {
+  .residential-replacement-hero .badge-teal {
+    max-width: 100%;
+    padding: 0.55rem 0.85rem;
+    color: var(--color-primary-hover);
+    border-width: 1.5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.45;
+    letter-spacing: 0.015em;
+    white-space: normal;
+  }
+
+  .residential-replacement-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem !important;
+  }
+
+  .residential-replacement-hero-actions > .btn {
+    width: 100%;
+    min-height: 56px;
+    justify-content: center;
+    padding-inline: 1rem;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    text-align: center;
+  }
+}
+
 /* --- Print Styles --- */
 @media print {
   .site-header, .site-footer, .btn, .mobile-drawer, .toast-container, .no-print {
