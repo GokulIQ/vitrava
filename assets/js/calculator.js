@@ -119,13 +119,21 @@
     }
 
     calculate() {
-      const windowCount = parseInt(this.windowCountInput?.value || 15, 10);
-      const sizeMultiplier = parseFloat(this.windowSizeSelect?.value || 1.0);
+      const rawCount = parseInt(this.windowCountInput?.value, 10);
+      const windowCount = (!isNaN(rawCount) && rawCount > 0) ? Math.min(60, Math.max(1, rawCount)) : 15;
+
+      const rawSize = parseFloat(this.windowSizeSelect?.value);
+      const sizeMultiplier = (!isNaN(rawSize) && rawSize > 0) ? rawSize : 1.0;
+
       const existingKey = this.existingGlazingSelect?.value || 'single';
       const proposedKey = this.proposedGlazingSelect?.value || 'triple_krypton';
       const climateKey = this.climateSelect?.value || 'northern';
-      const annualHvacBill = Math.max(500, parseFloat(this.hvacBillInput?.value || 2800));
-      const projectBudget = parseFloat(this.projectBudgetInput?.value || 0);
+
+      const rawHvac = parseFloat(this.hvacBillInput?.value);
+      const annualHvacBill = (!isNaN(rawHvac) && rawHvac > 0) ? Math.min(50000, Math.max(200, rawHvac)) : 2800;
+
+      const rawBudget = parseFloat(this.projectBudgetInput?.value);
+      const projectBudget = (!isNaN(rawBudget) && rawBudget >= 0) ? rawBudget : 0;
 
       const climateFraction = MODEL_ASSUMPTIONS.climateWindowLoadFraction[climateKey] || 0.35;
       const oldU = MODEL_ASSUMPTIONS.glazingUValues[existingKey]?.uFactor || 1.0;
@@ -133,9 +141,9 @@
       const newU = proposedData.uFactor;
 
       // Reduction efficiency between existing and proposed window U-factor
-      const rawImprovement = Math.max(0.2, (oldU - newU) / oldU);
+      const rawImprovement = Math.max(0.1, Math.min(0.95, (oldU - newU) / oldU));
       // Window coverage factor (normal home has ~20 windows total)
-      const coverageRatio = Math.min(1.2, (windowCount * sizeMultiplier) / 18);
+      const coverageRatio = Math.min(1.2, Math.max(0.2, (windowCount * sizeMultiplier) / 18));
 
       // Estimated energy loss reduction percentage
       const windowLossReductionPct = Math.round(rawImprovement * 100);
@@ -143,7 +151,7 @@
       // Annual rupee savings calculation
       // Savings = (Total HVAC Bill * Window Load Fraction) * Window Thermal Improvement * Window Coverage
       const annualBaseWindowCost = annualHvacBill * climateFraction;
-      const annualSavings = Math.round(annualBaseWindowCost * rawImprovement * Math.min(1.0, coverageRatio));
+      const annualSavings = Math.max(0, Math.round(annualBaseWindowCost * rawImprovement * Math.min(1.0, coverageRatio)));
 
       // 5-Year and 10-Year cumulative savings with compounding energy inflation
       let fiveYearTotal = 0;
@@ -162,11 +170,13 @@
       // Payback calculation
       let paybackYears = 'N/A';
       if (projectBudget > 0 && annualSavings > 0) {
-        const years = (projectBudget / annualSavings).toFixed(1);
-        paybackYears = `${years} yrs`;
+        const val = projectBudget / annualSavings;
+        if (isFinite(val) && !isNaN(val)) {
+          paybackYears = `${val.toFixed(1)} yrs`;
+        }
       }
 
-      // Carbon offset calculation (~0.85 lbs CO2 per currency unit saved in grid power/gas)
+      // Carbon offset calculation (~2.8 lbs CO2 per unit saved in HVAC energy)
       const co2LbsAnnual = Math.round(annualSavings * 2.8);
 
       // Render Outputs

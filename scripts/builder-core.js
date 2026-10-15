@@ -52,7 +52,7 @@ function renderHeader(depth = 0, activeNav = '') {
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav class="desktop-nav" style="display: flex; align-items: center; gap: 0.25rem;" aria-label="Main Navigation">
+      <nav class="desktop-nav" aria-label="Main Navigation">
         <!-- Home Dropdown -->
         <div class="nav-dropdown">
           <a href="${root}index.html" class="nav-link ${activeNav === 'home' ? 'active' : ''}">
@@ -79,29 +79,34 @@ function renderHeader(depth = 0, activeNav = '') {
           <a href="${root}services.html" class="nav-link ${activeNav === 'services' ? 'active' : ''}">
             Services ${ICONS.chevronDown}
           </a>
-          <div class="dropdown-menu" style="min-width: 320px;">
-            <div style="font-size: 0.75rem; font-weight: 700; color: var(--color-primary); text-transform: uppercase; padding: 0.35rem 0.85rem; letter-spacing: 0.05em;">Installation Services</div>
-            <a href="${root}services/residential-replacement.html" class="dropdown-item">
-              <div><strong>Residential Replacement</strong><small style="color: var(--color-text-muted); display: block;">Turnkey whole-home transformation</small></div>
-            </a>
-            <a href="${root}services/energy-assessment.html" class="dropdown-item">
-              <div><strong>Energy Efficiency Assessment</strong><small style="color: var(--color-text-muted); display: block;">FLIR thermal heat leak diagnostics</small></div>
-            </a>
-            <a href="${root}services/custom-measurement.html" class="dropdown-item">
-              <div><strong>Custom Window Measurement</strong><small style="color: var(--color-text-muted); display: block;">Sub-millimeter laser opening survey</small></div>
-            </a>
-            <a href="${root}services/professional-installation.html" class="dropdown-item">
-              <div><strong>Master Certified Installation</strong><small style="color: var(--color-text-muted); display: block;">AAMA 2400 structural anchoring</small></div>
-            </a>
-            <a href="${root}services/weatherproofing-air-sealing.html" class="dropdown-item">
-              <div><strong>Weatherproofing &amp; Air Sealing</strong><small style="color: var(--color-text-muted); display: block;">Polyurethane thermal perimeter seal</small></div>
-            </a>
-            <a href="${root}services/warranty-aftercare.html" class="dropdown-item">
-              <div><strong>25-Year Warranty &amp; Aftercare</strong><small style="color: var(--color-text-muted); display: block;">Non-prorated transferable bond</small></div>
-            </a>
-            <div style="border-top: 1px solid var(--color-border); margin-top: 0.5rem; padding-top: 0.5rem;">
-              <a href="${root}services.html#window-styles" class="dropdown-item" style="color: var(--color-primary); font-weight: 700;">
-                <div><strong>Explore 6 Window Styles &rarr;</strong><small style="color: var(--color-text-muted); display: block;">Casement, Double-Hung, Sliding &amp; more</small></div>
+          <div class="dropdown-menu dropdown-menu--services">
+            <div class="dropdown-services-header">
+              <span class="dropdown-category-title">Installation &amp; Engineering Services</span>
+              <a href="${root}services.html" class="dropdown-view-all">All Services &rarr;</a>
+            </div>
+            <div class="dropdown-services-grid">
+              <a href="${root}services/residential-replacement.html" class="dropdown-item">
+                <div><strong>Residential Replacement</strong><small>Turnkey whole-home transformation</small></div>
+              </a>
+              <a href="${root}services/energy-assessment.html" class="dropdown-item">
+                <div><strong>Energy Assessment</strong><small>FLIR thermal diagnostics</small></div>
+              </a>
+              <a href="${root}services/custom-measurement.html" class="dropdown-item">
+                <div><strong>Custom Measurement</strong><small>Laser opening survey</small></div>
+              </a>
+              <a href="${root}services/professional-installation.html" class="dropdown-item">
+                <div><strong>Certified Installation</strong><small>AAMA 2400 anchoring</small></div>
+              </a>
+              <a href="${root}services/weatherproofing-air-sealing.html" class="dropdown-item">
+                <div><strong>Weatherproofing &amp; Sealing</strong><small>Perimeter thermal seal</small></div>
+              </a>
+              <a href="${root}services/warranty-aftercare.html" class="dropdown-item">
+                <div><strong>25-Year Warranty</strong><small>Non-prorated transferable bond</small></div>
+              </a>
+            </div>
+            <div class="dropdown-services-footer">
+              <a href="${root}services.html#window-styles" class="dropdown-item dropdown-item--highlight">
+                <div><strong>Explore 6 Window Styles &rarr;</strong><small>Casement, Double-Hung, Sliding &amp; more</small></div>
               </a>
             </div>
           </div>
@@ -117,18 +122,15 @@ function renderHeader(depth = 0, activeNav = '') {
       </nav>
 
       <!-- Right Utility Actions -->
-      <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <div style="display: flex; align-items: center; gap: 0.65rem;">
         <!-- Theme Toggle -->
-        <button type="button" class="btn btn-secondary btn-icon" data-action="toggle-theme" aria-label="Toggle color theme" title="Toggle Light/Dark Theme">
-          ${ICONS.sun}
-          ${ICONS.moon}
+        <button type="button" class="btn btn-secondary btn-icon nav-theme-toggle" data-action="toggle-theme" aria-label="Toggle color theme" title="Toggle Light/Dark Theme">
+          <svg class="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-dark" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
         </button>
-
-        <!-- RTL Layout Toggle -->
-        <button type="button" class="btn btn-secondary btn-sm" data-action="toggle-rtl" aria-label="Toggle text direction" title="Toggle LTR/RTL Layout" style="font-size: 0.8rem; padding: 0.4rem 0.65rem;">
+        <button type="button" class="btn btn-secondary btn-sm nav-rtl-toggle" data-action="toggle-rtl" aria-label="Toggle text direction" title="Toggle LTR/RTL Layout">
           <span class="rtl-btn-text">RTL</span>
         </button>
-
         <!-- Login -->
         <a href="${root}login.html" class="btn btn-secondary btn-sm desktop-only nav-login">Login</a>
 
@@ -149,17 +151,19 @@ function renderHeader(depth = 0, activeNav = '') {
   <div id="mobile-drawer" class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
     <div class="mobile-drawer-overlay"></div>
     <div class="mobile-drawer-content">
-      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid var(--color-border);">
-        <a href="${root}index.html" style="display: flex; align-items: center; gap: 0.5rem;">
+      <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.15rem 1.25rem; border-bottom: 1px solid var(--color-border); gap: 0.5rem;">
+        <a href="${root}index.html" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
           ${ICONS.logo}
-          <span style="font-size: 1.25rem; font-weight: 800; color: var(--color-text-main);">VITRAVA</span>
+          <span style="font-size: 1.2rem; font-weight: 800; color: var(--color-text-main);">VITRAVA</span>
         </a>
-        <button type="button" class="btn btn-secondary btn-icon" data-action="close-mobile-menu" aria-label="Close navigation menu">
-          ${ICONS.close}
-        </button>
+        <div style="display: flex; align-items: center; gap: 0.4rem;">
+          <button type="button" class="btn btn-secondary btn-icon" data-action="close-mobile-menu" aria-label="Close navigation menu" style="width: 36px; height: 36px;">
+            ${ICONS.close}
+          </button>
+        </div>
       </div>
 
-      <div style="padding: 1.25rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+      <div style="padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; overflow-y: auto;">
         <a href="${root}index.html" class="portal-nav-link">Home 01 — Energy Savings</a>
         <a href="${root}home-02.html" class="portal-nav-link">Home 02 — Architectural</a>
         <a href="${root}services.html" class="portal-nav-link">Services &amp; Window Styles</a>
@@ -170,13 +174,13 @@ function renderHeader(depth = 0, activeNav = '') {
         <a href="${root}blog.html" class="portal-nav-link">Knowledge Hub (Blog)</a>
         <a href="${root}contact.html" class="portal-nav-link">Contact Us</a>
         <hr style="border: none; border-top: 1px solid var(--color-border); margin-block: 0.5rem;">
-        <a href="${root}dashboard/overview.html" class="portal-nav-link" style="color: var(--color-primary); font-weight: 700;">Dashboard</a>
+        <a href="${root}dashboard/overview.html" class="portal-nav-link" style="color: var(--color-primary); font-weight: 700;">Customer Dashboard</a>
       </div>
 
-      <div style="padding: 1.25rem 1.5rem; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 0.75rem;">
+      <div style="padding: 1.15rem 1.25rem; border-top: 1px solid var(--color-border); display: flex; flex-direction: column; gap: 0.65rem;">
         <a href="${root}login.html" class="btn btn-secondary nav-login" style="width: 100%;">Login</a>
         <a href="${root}booking.html" class="btn btn-primary" style="width: 100%;">Book Measurement</a>
-        <a href="${root}quote.html" class="btn btn-secondary" style="width: 100%;">Request Free Quote</a>
+        <a href="${root}quote.html" class="btn btn-outline" style="width: 100%;">Request Free Quote</a>
       </div>
     </div>
   </div>
@@ -274,13 +278,7 @@ function renderFooter(depth = 0) {
         <div>
           &copy; 2026 Vitrava Window Replacement Technologies. All rights reserved. Commercial HTML Template.
         </div>
-        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-          <a href="${root}about.html" class="footer-link">About Us</a>
-          <a href="${root}pricing.html" class="footer-link">Financing Terms</a>
-          <a href="${root}calculator.html" class="footer-link">Energy Calculator</a>
-          <a href="${root}dashboard/overview.html" class="footer-link">Customer Portal</a>
-          <a href="${root}contact.html" class="footer-link">Privacy &amp; Terms</a>
-        </div>
+
       </div>
     </div>
   </footer>
@@ -307,10 +305,13 @@ function renderPortalSidebar(depth = 1, active = 'overview') {
     </a>
 
     <!-- Customer Card -->
-    <div style="background-color: var(--color-card-muted); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
-      <div style="font-size: 0.8125rem; color: var(--color-text-muted);">Active Homeowner</div>
-      <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-text-main);">Alexander Hayes</div>
-      <div style="font-size: 0.75rem; color: var(--color-primary); font-family: var(--font-mono); margin-top: 2px;">PROJECT #VIT-2026-8841</div>
+    <div style="background-color: var(--color-card-muted); padding: 0.85rem; border-radius: var(--radius-md); border: 1px solid var(--color-border); display: flex; align-items: center; gap: 0.75rem;">
+      <img src="${root}assets/images/testimonials/customer-alexander.jpg" alt="Alexander Hayes" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--color-surface); box-shadow: 0 0 0 1px var(--color-border); flex-shrink: 0;" loading="lazy">
+      <div style="min-width: 0;">
+        <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.04em;">Active Homeowner</div>
+        <div style="font-size: 0.95rem; font-weight: 700; color: var(--color-text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Alexander Hayes</div>
+        <div style="font-size: 0.75rem; color: var(--color-primary); font-family: var(--font-mono); margin-top: 2px;">PROJECT #VIT-2026-8841</div>
+      </div>
     </div>
 
     <!-- Navigation Links -->
@@ -359,7 +360,7 @@ function renderPortalUtilities() {
           ${ICONS.sun}
           ${ICONS.moon}
         </button>
-        <button type="button" class="btn btn-secondary btn-icon" data-action="toggle-rtl" aria-label="Toggle text direction" title="Toggle LTR/RTL Layout">
+        <button type="button" class="btn btn-secondary btn-sm" data-action="toggle-rtl" aria-label="Toggle text direction" title="Toggle LTR/RTL Layout" style="min-width: 2.75rem; height: 44px; padding: 0.35rem 0.45rem; white-space: nowrap; flex: 0 0 auto;">
           <span class="rtl-btn-text">RTL</span>
         </button>
       </div>`;
@@ -370,18 +371,35 @@ function renderPortalNavigation(depth = 1) {
   const root = getRelRoot(depth);
   return `
   <a class="portal-skip-link" href="#main-content">Skip to main content</a>
-  <details class="portal-mobile-navigation">
-    <summary>Client Portal Navigation</summary>
-    <nav aria-label="Client portal">
-      <a class="portal-nav-link" href="${root}dashboard/overview.html">Overview</a>
-      <a class="portal-nav-link" href="${root}dashboard/project.html">My Installation Project</a>
-      <a class="portal-nav-link" href="${root}dashboard/appointments.html">Appointments</a>
-      <a class="portal-nav-link" href="${root}dashboard/quotes.html">Quotes &amp; Estimates</a>
-      <a class="portal-nav-link" href="${root}dashboard/documents.html">Warranty &amp; Documents</a>
-      <a class="portal-nav-link" href="${root}dashboard/profile.html">Profile &amp; Settings</a>
-      <a class="portal-nav-link" href="${root}login.html">Log out</a>
-    </nav>
-  </details>`;
+  <div class="portal-mobile-bar no-print">
+    <div style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 0.85rem 1.25rem;">
+      <a href="${root}dashboard/overview.html" class="site-brand" style="gap: 0.5rem; text-decoration: none;">
+        ${ICONS.logo}
+        <span class="site-brand__text">
+          <span class="site-brand__name" style="font-size: 1.15rem;">VITRAVA</span>
+          <span class="site-brand__tagline" style="font-size: 0.55rem; color: var(--color-primary); font-weight: 700;">Client Portal</span>
+        </span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 0.45rem;">
+        <button type="button" class="btn btn-secondary btn-icon" data-action="toggle-portal-menu" aria-label="Toggle portal menu" aria-expanded="false" style="width: 36px; height: 36px;">
+          ${ICONS.menu}
+        </button>
+      </div>
+    </div>
+    <div id="portal-mobile-menu" class="portal-mobile-menu" style="display: none; border-top: 1px solid var(--color-border); background-color: var(--color-surface); padding: 1rem 1.25rem;">
+      <nav aria-label="Client portal navigation" style="display: flex; flex-direction: column; gap: 0.35rem;">
+        <a class="portal-nav-link" href="${root}dashboard/overview.html">Overview</a>
+        <a class="portal-nav-link" href="${root}dashboard/project.html">My Installation Project</a>
+        <a class="portal-nav-link" href="${root}dashboard/appointments.html">Appointments</a>
+        <a class="portal-nav-link" href="${root}dashboard/quotes.html">Quotes &amp; Estimates</a>
+        <a class="portal-nav-link" href="${root}dashboard/documents.html">Warranty &amp; Documents</a>
+        <a class="portal-nav-link" href="${root}dashboard/profile.html">Profile &amp; Settings</a>
+        <hr style="border: none; border-top: 1px solid var(--color-border); margin-block: 0.5rem;">
+        <a class="portal-nav-link" href="${root}index.html" style="color: var(--color-primary); font-weight: 600;">&larr; Return to Main Website</a>
+        <a class="portal-nav-link" href="${root}login.html" style="color: var(--color-danger); font-weight: 600;">Log out</a>
+      </nav>
+    </div>
+  </div>`;
 }
 
 // Master HTML Wrapper
@@ -404,6 +422,17 @@ function wrapHtml(title, description, bodyContent, depth = 0, activeNav = '', ex
   <meta property="og:description" content="${description}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="${root}assets/images/hero/home-01-hero.jpg">
+  <!-- Immediate Theme & Direction Initialization (Prevents FOUC) -->
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('vitrava-theme-pref') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', t);
+        var d = localStorage.getItem('vitrava-dir-pref');
+        if (d) document.documentElement.setAttribute('dir', d);
+      } catch (e) {}
+    })();
+  </script>
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

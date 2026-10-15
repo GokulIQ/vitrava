@@ -88,7 +88,7 @@ requiredStyles.forEach(s => {
   const hasFaq = pContent.includes('data-accordion-single="true"');
   const hasBreadcrumb = pContent.includes('services.html');
   const hasQuoteCta = pContent.includes('quote.html');
-  const hasTwoImages = (pContent.match(/assets\/images\/products\/product-[a-z-]+/g) || []).length >= 2;
+  const hasTwoImages = (pContent.match(/assets\/images\/(products|window-styles)\/[a-z0-9-]+/g) || []).length >= 2;
 
   if (pSections.length <= 7 && hasFaq && hasBreadcrumb && hasQuoteCta && hasTwoImages) {
     console.log(`   ✓ PASS: ${pFile} — ${pSections.length} sections, FAQs included, 2+ images, breadcrumb updated, CTA present`);

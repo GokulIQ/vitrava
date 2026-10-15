@@ -115,7 +115,7 @@ function generateHome01() {
 
       <div class="grid-3-col">
         <!-- Product 1 -->
-        <div class="card-arch">
+        <div class="card-arch home-style-card">
           <div class="window-frame-wrapper" style="aspect-ratio: 16 / 10; margin-bottom: 1.25rem;">
             <img src="assets/images/window-styles/casement-main.jpg" alt="Casement Window" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
@@ -129,7 +129,7 @@ function generateHome01() {
         </div>
 
         <!-- Product 2 -->
-        <div class="card-arch">
+        <div class="card-arch home-style-card">
           <div class="window-frame-wrapper" style="aspect-ratio: 16 / 10; margin-bottom: 1.25rem;">
             <img src="assets/images/window-styles/double-hung-main.jpg" alt="Double-Hung Window" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
@@ -143,7 +143,7 @@ function generateHome01() {
         </div>
 
         <!-- Product 3 -->
-        <div class="card-arch">
+        <div class="card-arch home-style-card">
           <div class="window-frame-wrapper" style="aspect-ratio: 16 / 10; margin-bottom: 1.25rem;">
             <img src="assets/images/window-styles/sliding-main.jpg" alt="Sliding Window" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
           </div>
@@ -183,7 +183,7 @@ function generateHome01() {
               <div><strong>Warm-Edge Structural Spacer:</strong> Stops perimeter condensation and frost buildup.</div>
             </div>
           </div>
-          <a href="calculator.html" class="btn btn-primary">Calculate Your Home's Savings &rarr;</a>
+          <a href="calculator.html" class="btn btn-primary btn-no-wrap">Calculate Your Home's Savings &rarr;</a>
         </div>
 
         <div>
@@ -315,7 +315,7 @@ function generateHome01() {
           <div class="testimonial-card__rating" aria-label="5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
           <blockquote>&ldquo;The rooms feel so much more comfortable, and the street noise is noticeably lower. The crew explained each step and left the home spotless.&rdquo;</blockquote>
           <footer class="testimonial-card__author">
-            <span class="testimonial-avatar" aria-hidden="true">MB</span>
+            <img src="assets/images/testimonials/customer-maya.jpg" alt="Maya Brooks - Homeowner" class="testimonial-avatar" width="48" height="48" loading="lazy" decoding="async">
             <span><strong>Maya Brooks</strong><small>Whole-home replacement</small></span>
           </footer>
         </article>
@@ -324,7 +324,7 @@ function generateHome01() {
           <div class="testimonial-card__rating" aria-label="5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
           <blockquote>&ldquo;From the first measurement to the final walkthrough, everything felt organized. The new windows look right at home with our older house.&rdquo;</blockquote>
           <footer class="testimonial-card__author">
-            <span class="testimonial-avatar testimonial-avatar--second" aria-hidden="true">PS</span>
+            <img src="assets/images/testimonials/customer-priya.jpg" alt="Priya Shah - Homeowner" class="testimonial-avatar" width="48" height="48" loading="lazy" decoding="async">
             <span><strong>Priya Shah</strong><small>Historic home upgrade</small></span>
           </footer>
         </article>
@@ -333,7 +333,7 @@ function generateHome01() {
           <div class="testimonial-card__rating" aria-label="5 out of 5 stars"><span aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
           <blockquote>&ldquo;The estimate was clear, the schedule stayed on track, and every window opens smoothly. We appreciated how carefully the team treated our home.&rdquo;</blockquote>
           <footer class="testimonial-card__author">
-            <span class="testimonial-avatar testimonial-avatar--third" aria-hidden="true">JC</span>
+            <img src="assets/images/testimonials/customer-jordan.jpg" alt="Jordan Carter - Homeowner" class="testimonial-avatar" width="48" height="48" loading="lazy" decoding="async">
             <span><strong>Jordan Carter</strong><small>Window and patio upgrade</small></span>
           </footer>
         </article>
@@ -389,7 +389,7 @@ function generateHome02() {
           </p>
 
           <div class="hero-arch-actions">
-            <a href="booking.html" class="btn btn-primary btn-lg hero-arch-btn-primary">
+            <a href="booking.html" class="btn btn-primary btn-lg hero-arch-btn-primary btn-no-wrap">
               <span>Book Free Measurement</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="icon-flip-rtl" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
             </a>
@@ -665,8 +665,8 @@ function generateHome02() {
       <p class="text-lead" style="margin-bottom: 2rem;">
         Meet with a senior Vitrava window architect. We bring custom frame finishes, triple-pane glass cross-sections, and laser sizing directly to your residence.
       </p>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+      <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
         <a href="quote.html" class="btn btn-secondary btn-lg">Request Project Estimate</a>
       </div>
     </div>
@@ -860,7 +860,7 @@ function generateAboutPage() {
         Schedule a complimentary in-home consultation. We inspect your existing windows, perform a laser measurement, and provide a guaranteed price quote.
       </p>
       <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+        <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
         <a href="calculator.html" class="btn btn-secondary btn-lg">Calculate Your Energy Savings</a>
       </div>
     </div>
@@ -901,7 +901,7 @@ function generateCalculatorPage() {
           
           <!-- Column 1: Interactive User Inputs -->
           <form id="energy-calculator-form" onsubmit="return false;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
+            <div class="calc-form-heading" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.75rem;">
               <h3 class="text-h3">Input Your Home Parameters</h3>
               <button type="button" id="calc-reset-btn" class="btn btn-secondary btn-sm" style="font-size: 0.8rem;">Reset Defaults</button>
             </div>
@@ -925,9 +925,9 @@ function generateCalculatorPage() {
             <div class="form-group">
               <label for="calc-window-size" class="form-label">Average Window Size</label>
               <select id="calc-window-size" class="form-select">
-                <option value="0.8">Small (Compact Sashes, ~12 sq ft)</option>
-                <option value="1.0" selected>Standard Residential (~18 sq ft)</option>
-                <option value="1.35">Large Architectural (~25+ sq ft)</option>
+                <option value="0.8">Small (~12 sq ft)</option>
+                <option value="1.0" selected>Standard (~18 sq ft)</option>
+                <option value="1.35">Large (~25+ sq ft)</option>
               </select>
             </div>
 
@@ -935,9 +935,9 @@ function generateCalculatorPage() {
             <div class="form-group">
               <label for="calc-existing-glazing" class="form-label">Existing Window Glazing Type</label>
               <select id="calc-existing-glazing" class="form-select">
-                <option value="single" selected>Single-Pane Clear Glass (Drafty / High Heat Loss)</option>
-                <option value="aluminum_slider">Uninsulated Metal Frame Sliders (Cold Condensation)</option>
-                <option value="double_old">Older Clear Dual-Pane (15+ Years Old / Weak Seal)</option>
+                <option value="single" selected>Single-Pane Clear Glass</option>
+                <option value="aluminum_slider">Uninsulated Metal-Frame Sliders</option>
+                <option value="double_old">Older Clear Dual-Pane (15+ Years)</option>
               </select>
             </div>
 
@@ -945,8 +945,8 @@ function generateCalculatorPage() {
             <div class="form-group">
               <label for="calc-proposed-glazing" class="form-label">Proposed Vitrava Glazing Package</label>
               <select id="calc-proposed-glazing" class="form-select">
-                <option value="triple_krypton" selected>Signature Triple-Pane Krypton (U-0.16 &bull; Maximum Efficiency)</option>
-                <option value="dual_argon">Performance Dual-Pane Low-E Argon (U-0.26 &bull; Balanced Value)</option>
+                <option value="triple_krypton" selected>Signature Triple-Pane Krypton</option>
+                <option value="dual_argon">Performance Dual-Pane Argon</option>
               </select>
             </div>
 
@@ -954,9 +954,9 @@ function generateCalculatorPage() {
             <div class="form-group">
               <label for="calc-climate-zone" class="form-label">Geographic Climate Profile</label>
               <select id="calc-climate-zone" class="form-select">
-                <option value="northern" selected>Northern Climate (Cold Winters &bull; Heating Dominated)</option>
-                <option value="central">Central / Mixed Climate (Moderate Heating &amp; Cooling)</option>
-                <option value="southern">Southern Climate (Intense Sun &bull; Cooling Dominated)</option>
+                <option value="northern" selected>Northern Climate (Cold Winters)</option>
+                <option value="central">Central / Mixed Climate</option>
+                <option value="southern">Southern Climate (Hot / Sunny)</option>
               </select>
             </div>
 
@@ -984,7 +984,7 @@ function generateCalculatorPage() {
             </div>
 
             <!-- 5-Yr & 10-Yr ROI Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="calc-metrics-grid">
               <div class="card-flat" style="text-align: center; padding: 1.25rem;">
                 <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase;">5-Year Cumulative</div>
                 <div id="out-5yr-savings" style="font-size: 1.5rem; font-weight: 800; color: var(--color-text-main); font-family: var(--font-mono); margin-top: 0.25rem;">₹4,354</div>
@@ -998,7 +998,7 @@ function generateCalculatorPage() {
             </div>
 
             <!-- Additional Metrics Grid -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+            <div class="calc-metrics-grid">
               <div class="metric-box">
                 <span class="metric-label">Window Loss Reduction</span>
                 <span id="out-loss-reduction" style="font-size: 1.35rem; font-weight: 800; color: var(--color-primary); font-family: var(--font-mono);">74%</span>
@@ -1130,7 +1130,7 @@ function generatePricingPage() {
             <li style="display: flex; gap: 0.5rem;">${ICONS.check} 25-Year Transferable Warranty Deed</li>
           </ul>
 
-          <a href="booking.html" class="btn btn-primary btn-lg" style="width: 100%;">Schedule Free Measurement</a>
+          <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap" style="width: 100%;">Schedule Free Measurement</a>
         </div>
 
         <!-- Package 3: Signature Efficiency -->
@@ -1159,9 +1159,9 @@ function generatePricingPage() {
       </div>
 
       <!-- Feature Comparison Table -->
-      <div style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 4rem;">
+      <div style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: clamp(1rem, 2.5vw, 2.5rem); margin-bottom: 4rem; max-width: 100%; box-sizing: border-box;">
         <h3 class="text-h2" style="margin-bottom: 1.5rem; text-align: center;">Comprehensive Package Comparison</h3>
-        <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+        <div class="table-responsive" style="max-width: 100%; width: 100%; min-width: 0;">
           <table style="width: 100%; border-collapse: collapse; min-width: 650px; font-size: 0.9rem;">
             <thead>
               <tr style="border-bottom: 2px solid var(--color-border); color: var(--color-text-main);">
@@ -1228,7 +1228,7 @@ function generatePricingPage() {
         </div>
         <div class="card-flat" style="background-color: var(--color-card); text-align: center;">
           <div style="font-size: 0.8125rem; color: var(--color-text-muted); text-transform: uppercase;">Sample Payment Basis</div>
-          <div style="font-size: 2.25rem; font-weight: 800; color: var(--color-primary); font-family: var(--font-mono); margin-block: 0.25rem;">₹129 / mo</div>
+          <div class="payment-basis-amount">₹129 / month</div>
           <div style="font-size: 0.8125rem; color: var(--color-text-muted); margin-bottom: 1rem;">Based on ₹10,000 project scope &bull; 84 months &bull; Subject to credit approval</div>
           <span class="badge badge-accent">No Prepayment Penalties</span>
         </div>
@@ -1531,7 +1531,7 @@ function generateQuotePage() {
             </label>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">Submit Quote Request &rarr;</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-no-wrap" style="width: 100%; margin-top: 1rem;">Submit Quote Request &rarr;</button>
         </form>
       </div>
     </div>
@@ -1618,7 +1618,10 @@ function generateBookingPage() {
             <strong>What to Expect:</strong> Visits typically take 45 to 60 minutes. Our technician measures rough openings from inside your home and shows physical frame finishes and glazing cutaways.
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Confirm Measurement Appointment &rarr;</button>
+          <button type="submit" class="btn btn-primary btn-lg booking-submit-btn" style="width: 100%;">
+            <span>Confirm Measurement Appointment</span>
+            <span aria-hidden="true">&rarr;</span>
+          </button>
         </form>
       </div>
     </div>

@@ -379,7 +379,7 @@ function generateServicesDirectory() {
             <div class="window-frame-wrapper" style="aspect-ratio: 16 / 10; margin-bottom: 1.25rem; border-radius: var(--radius-md); overflow: hidden;">
               <img src="${s.heroImg}" alt="${s.title} — Vitrava Energy Efficient Windows" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" loading="lazy">
             </div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem;">
+            <div class="service-card-meta" style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.65rem;">
               <span class="badge badge-accent">SERVICE 0${idx + 1}</span>
               <span style="font-size: 0.8125rem; font-weight: 700; color: var(--color-primary); display: inline-flex; align-items: center; gap: 0.35rem;">
                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -400,7 +400,7 @@ function generateServicesDirectory() {
               <span class="badge badge-muted" style="font-size: 0.75rem;">${s.technical[3] ? s.technical[3].label.split(' ')[0] : 'Certified'}: ${s.technical[3] ? s.technical[3].value.split(/[(/]/)[0].trim().slice(0, 22) : 'Standard'}</span>
             </div>
           </div>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 1.15rem; margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
+          <div class="service-card-actions" style="border-top: 1px solid var(--color-border); padding-top: 1.15rem; margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
             <a href="services/${s.slug}.html" class="btn btn-primary btn-sm" style="font-weight: 700; flex: 1; text-align: center; justify-content: center;">
               View Service Details &rarr;
             </a>
@@ -615,8 +615,8 @@ function generateServicesDirectory() {
       <p class="text-lead" style="margin-bottom: 2rem;">
         Schedule a complimentary in-home laser measurement with an architectural window specialist. Zero pressure, transparent line-item estimates, and physical material samples.
       </p>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
-        <a href="booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+      <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+        <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
         <a href="quote.html" class="btn btn-secondary btn-lg">Request Online Quote</a>
         <a href="calculator.html" class="btn btn-outline btn-lg">Calculate Energy Savings</a>
       </div>

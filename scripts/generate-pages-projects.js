@@ -116,8 +116,8 @@ function generateProjectsDirectory() {
       <p class="text-lead" style="margin-bottom: 2rem;">
         Schedule a complimentary in-home laser measurement and design consultation. Every installation includes our 25-Year non-prorated warranty.
       </p>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+      <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
         <a href="calculator.html" class="btn btn-secondary btn-lg">Estimate Your Energy Savings</a>
       </div>
     </div>
@@ -261,15 +261,15 @@ function generateProjectDetailPages() {
     <!-- Section 5: Case Study Project Navigation -->
     <section class="section-spacing-sm" style="background-color: var(--color-surface); border-block: 1px solid var(--color-border);">
       <div class="container-custom">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+        <div class="project-pagination-nav">
           <a href="${root}projects/${prevProj.slug}.html" class="btn btn-outline" style="font-weight: 600;">
-            &larr; Previous Case Study: ${prevProj.title.split(' ')[0]}
+            <span class="icon-flip-rtl" aria-hidden="true">&larr;</span> Previous Case Study: ${prevProj.title.split(' ')[0]}
           </a>
           <a href="${root}projects.html" class="btn btn-secondary">
             View All 6 Installations
           </a>
           <a href="${root}projects/${nextProj.slug}.html" class="btn btn-outline" style="font-weight: 600;">
-            Next Case Study: ${nextProj.title.split(' ')[0]} &rarr;
+            Next Case Study: ${nextProj.title.split(' ')[0]} <span class="icon-flip-rtl" aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
@@ -282,8 +282,8 @@ function generateProjectDetailPages() {
         <p class="text-lead" style="margin-bottom: 2rem;">
           Every home deserves architectural precision, draft-free thermal comfort, and lower heating costs. Book your free in-home measurement today.
         </p>
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="${root}booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+        <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="${root}booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
           <a href="${root}quote.html" class="btn btn-secondary btn-lg">Request Project Estimate</a>
         </div>
       </div>

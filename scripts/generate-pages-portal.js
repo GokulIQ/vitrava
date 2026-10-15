@@ -634,6 +634,17 @@ function generateProfilePage() {
       </div>
 
       <div class="portal-profile-panels">
+        <!-- Customer Profile Identity Card -->
+        <div class="card-arch" style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;">
+          <img src="${root}assets/images/testimonials/customer-alexander.jpg" alt="Alexander Hayes" style="width: 76px; height: 76px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary-light); box-shadow: var(--shadow-sm); flex-shrink: 0;" loading="lazy">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Active Homeowner Account</div>
+            <h3 class="text-h3" style="margin-bottom: 0.25rem;">Alexander &amp; Sarah Hayes</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.875rem; margin-bottom: 0.5rem;">Project ID: #VIT-2026-8841 &bull; 742 Evergreen Terrace, Oakridge Heights, OR</p>
+            <span class="badge badge-teal">Verified Installation Customer</span>
+          </div>
+        </div>
+
         <form id="portal-profile-form" class="card-arch" style="margin-bottom: 2rem;">
           <h3 class="text-h3" style="margin-bottom: 1.5rem;">Homeowner Contact Information</h3>
           

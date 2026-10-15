@@ -435,8 +435,8 @@ function generateProductsDirectory() {
       <p class="text-lead" style="margin-bottom: 2rem;">
         Schedule a complimentary measurement consultation. We bring physical frame and glazing samples right to your living room.
       </p>
-      <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-        <a href="booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+      <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+        <a href="booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
         <a href="calculator.html" class="btn btn-secondary btn-lg">Calculate Energy Savings</a>
         <a href="services.html" class="btn btn-outline btn-lg">Explore Services</a>
       </div>
@@ -467,7 +467,7 @@ function generateProductDetailPages() {
       <div class="container-custom">
         <div class="hero-grid-split">
           <div>
-            <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+            <div class="product-hero-badges" style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
               <span class="badge badge-teal">${p.style}</span>
               <span class="badge badge-citron">NFRC CERTIFIED</span>
             </div>
@@ -564,7 +564,7 @@ function generateProductDetailPages() {
             <p style="color: var(--color-text-muted); margin-bottom: 1.75rem; line-height: 1.65;">
               All ratings are verified under National Fenestration Rating Council (NFRC) testing standards and exceed Energy Star Northern Climate efficiency mandates.
             </p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+            <div class="product-metrics-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
               <div class="metric-box">
                 <span class="metric-label">U-Factor</span>
                 <span style="font-size: 1.15rem; font-weight: 700; color: var(--color-primary); font-family: var(--font-mono);">${p.specs.uFactor}</span>
@@ -664,8 +664,8 @@ function generateProductDetailPages() {
         <p class="text-lead" style="margin-bottom: 2rem;">
           Request a personalized in-home quote for Vitrava ${p.name}. Includes free laser measurement and our 25-Year non-prorated warranty bond.
         </p>
-        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-          <a href="${root}booking.html" class="btn btn-primary btn-lg">Schedule Free Measurement</a>
+        <div class="mobile-cta-stack" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="${root}booking.html" class="btn btn-primary btn-lg btn-no-wrap">Schedule Free Measurement</a>
           <a href="${root}quote.html" class="btn btn-secondary btn-lg">Request Line-Item Quote</a>
           <a href="${root}services.html#window-styles" class="btn btn-outline btn-lg">View All Styles</a>
         </div>

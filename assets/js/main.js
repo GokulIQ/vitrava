@@ -142,20 +142,46 @@
 
       trigger.setAttribute('aria-haspopup', 'true');
       trigger.setAttribute('aria-expanded', 'false');
+
       trigger.addEventListener('click', (event) => {
         if (window.matchMedia('(max-width: 1279px)').matches) return;
 
-        if (dropdown.classList.contains('is-open')) return;
-
         event.preventDefault();
+        const isOpen = dropdown.classList.contains('is-open');
+
         desktopDropdowns.forEach((otherDropdown) => {
           otherDropdown.classList.remove('is-open');
           otherDropdown.querySelector(':scope > .dropdown-menu')?.classList.remove('is-active');
           otherDropdown.querySelector(':scope > .nav-link')?.setAttribute('aria-expanded', 'false');
         });
-        dropdown.classList.add('is-open');
-        menu.classList.add('is-active');
-        trigger.setAttribute('aria-expanded', 'true');
+
+        if (!isOpen) {
+          dropdown.classList.add('is-open');
+          menu.classList.add('is-active');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Smooth mouse leave closing
+      let leaveTimer;
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(leaveTimer);
+      });
+      dropdown.addEventListener('mouseleave', () => {
+        leaveTimer = setTimeout(() => {
+          dropdown.classList.remove('is-open');
+          dropdown.querySelector(':scope > .dropdown-menu')?.classList.remove('is-active');
+          dropdown.querySelector(':scope > .nav-link')?.setAttribute('aria-expanded', 'false');
+        }, 160);
+      });
+
+      // Close dropdown when any link inside is clicked
+      menu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          dropdown.classList.remove('is-open');
+          menu.classList.remove('is-active');
+          trigger.setAttribute('aria-expanded', 'false');
+        });
       });
     });
 
@@ -216,6 +242,13 @@
 
     if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
     if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    // Close mobile drawer when any link inside is clicked
+    drawer?.querySelectorAll('.mobile-drawer-content a').forEach((link) => {
+      link.addEventListener('click', () => {
+        closeDrawer();
+      });
+    });
 
     document.addEventListener('keydown', (event) => {
       if (event.key !== 'Tab' || !drawer?.classList.contains('is-open')) return;

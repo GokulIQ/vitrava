@@ -231,5 +231,45 @@
     }
   }
 
+  // Bind mobile portal menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const utilities = document.querySelector('.portal-topbar .portal-utilities');
+    const menuToggle = document.querySelector('[data-action="toggle-portal-menu"]');
+
+    if (utilities && menuToggle && menuToggle.parentElement) {
+      const desktopParent = utilities.parentElement;
+      const desktopNextSibling = utilities.nextSibling;
+      const mobileActions = menuToggle.parentElement;
+      const desktopViewport = window.matchMedia('(min-width: 1024px)');
+      mobileActions.classList.add('portal-mobile-actions');
+
+      const placeUtilities = () => {
+        if (desktopViewport.matches) {
+          if (utilities.parentElement !== desktopParent) {
+            desktopParent.insertBefore(utilities, desktopNextSibling);
+          }
+        } else if (utilities.parentElement !== mobileActions) {
+          mobileActions.insertBefore(utilities, menuToggle);
+        }
+      };
+
+      placeUtilities();
+      desktopViewport.addEventListener('change', placeUtilities);
+    }
+
+    document.addEventListener('click', (e) => {
+      const toggleBtn = e.target.closest('[data-action="toggle-portal-menu"]');
+      if (toggleBtn) {
+        e.preventDefault();
+        const menu = document.getElementById('portal-mobile-menu');
+        if (menu) {
+          const isOpen = menu.style.display !== 'none';
+          menu.style.display = isOpen ? 'none' : 'block';
+          toggleBtn.setAttribute('aria-expanded', String(!isOpen));
+        }
+      }
+    });
+  });
+
   window.VitravaPortal = new ClientPortalManager();
 })();

@@ -286,7 +286,7 @@ function generateBlogDirectory() {
   <section class="section-spacing">
     <div class="container-custom">
       <!-- Category Filter Pills -->
-      <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
+      <div class="blog-category-filters" style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
         <button type="button" data-blog-category="all" class="btn btn-secondary btn-sm active">All Articles (9)</button>
         <button type="button" data-blog-category="science" class="btn btn-secondary btn-sm">Energy Science</button>
         <button type="button" data-blog-category="buying-guide" class="btn btn-secondary btn-sm">Buying Guides</button>
@@ -309,7 +309,7 @@ function generateBlogDirectory() {
           <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem; flex: 1;">
             ${a.summary}
           </p>
-          <div style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
+          <div class="blog-card-footer" style="border-top: 1px solid var(--color-border); padding-top: 1rem; display: flex; justify-content: space-between; align-items: center;">
             <div style="font-size: 0.8125rem; color: var(--color-text-muted);">
               By <strong style="color: var(--color-text-main);">${a.author.split(',')[0]}</strong> &bull; ${a.date}
             </div>
