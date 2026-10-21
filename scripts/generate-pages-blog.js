@@ -19,7 +19,7 @@ const articles = [
     content: `
       <h2>The Three Modes of Window Heat Transfer</h2>
       <p>Heat is always in motion, naturally migrating from warm zones to colder zones. In a residential building, windows represent the thinnest barrier between conditioned indoor air and outdoor temperature extremes. Heat escapes or enters your home through three distinct physical mechanisms:</p>
-      <ul>
+      <ul class="article-points">
         <li><strong>Conduction:</strong> Heat moving directly through physical materials—specifically the glass panes, spacers, and window frame structure.</li>
         <li><strong>Convection:</strong> Air currents circulating within the gap between glass panes, carrying heat from the warm interior pane to the cold exterior pane.</li>
         <li><strong>Thermal Radiation:</strong> Electromagnetic infrared energy emitted by warm objects inside your home (radiators, floors, human bodies) radiating directly through standard glass to the cold sky.</li>
@@ -264,20 +264,16 @@ const articles = [
 // 1. Generate Blog Directory Page (blog.html)
 function generateBlogDirectory() {
   const bodyContent = `
-  <!-- Section 1: Blog Hero & Live Search -->
+  <!-- Section 1: Blog Hero -->
   <section class="section-spacing-sm" style="background-color: var(--color-surface); border-bottom: 1px solid var(--color-border);">
     <div class="container-custom">
       <div style="max-width: 820px; margin-inline: auto; text-align: center;">
         <span class="badge badge-teal" style="margin-bottom: 1rem;">KNOWLEDGE HUB &amp; GUIDES</span>
         <h1 class="text-h1" style="margin-bottom: 1rem;">The Window Science &amp; Efficiency Hub</h1>
-        <p class="text-lead" style="margin-bottom: 2rem;">
+        <p class="text-lead">
           In-depth technical guides, building science insights, and transparent homeowner advice from Vitrava architectural window engineers.
         </p>
 
-        <!-- Live Search Bar -->
-        <div style="position: relative; max-width: 600px; margin-inline: auto;">
-          <input type="text" id="blog-search-input" class="form-input" placeholder="Search by topic, e.g. U-Factor, triple glazing, drafts, installation..." style="padding: 1rem 1.25rem; font-size: 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);" aria-label="Search blog articles">
-        </div>
       </div>
     </div>
   </section>
@@ -285,6 +281,11 @@ function generateBlogDirectory() {
   <!-- Section 2: Filterable Articles Grid -->
   <section class="section-spacing">
     <div class="container-custom">
+      <!-- Live Search Bar -->
+      <div style="position: relative; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">
+        <input type="text" id="blog-search-input" class="form-input" placeholder="Search by topic, e.g. U-Factor, triple glazing, drafts, installation..." style="padding: 1rem 1.25rem; font-size: 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);" aria-label="Search blog articles">
+      </div>
+
       <!-- Category Filter Pills -->
       <div class="blog-category-filters" style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
         <button type="button" data-blog-category="all" class="btn btn-secondary btn-sm active">All Articles (9)</button>

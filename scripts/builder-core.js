@@ -74,6 +74,8 @@ function renderHeader(depth = 0, activeNav = '') {
           </div>
         </div>
 
+        <a href="${root}about.html" class="nav-link ${activeNav === 'about' ? 'active' : ''}">About</a>
+
         <!-- Services Dropdown (Services & Styles) -->
         <div class="nav-dropdown">
           <a href="${root}services.html" class="nav-link ${activeNav === 'services' ? 'active' : ''}">
@@ -115,7 +117,6 @@ function renderHeader(depth = 0, activeNav = '') {
         <a href="${root}projects.html" class="nav-link ${activeNav === 'projects' ? 'active' : ''}">Projects</a>
         <a href="${root}calculator.html" class="nav-link ${activeNav === 'calculator' ? 'active' : ''}">Calculator</a>
         <a href="${root}pricing.html" class="nav-link ${activeNav === 'pricing' ? 'active' : ''}">Pricing</a>
-        <a href="${root}about.html" class="nav-link ${activeNav === 'about' ? 'active' : ''}">About</a>
         <a href="${root}blog.html" class="nav-link ${activeNav === 'blog' ? 'active' : ''}">Blog</a>
         <a href="${root}contact.html" class="nav-link ${activeNav === 'contact' ? 'active' : ''}">Contact</a>
         <a href="${root}dashboard/overview.html" class="nav-link${activeNav === 'portal' ? ' active' : ''}">Dashboard</a>
@@ -166,11 +167,11 @@ function renderHeader(depth = 0, activeNav = '') {
       <div style="padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; overflow-y: auto;">
         <a href="${root}index.html" class="portal-nav-link">Home 01 — Energy Savings</a>
         <a href="${root}home-02.html" class="portal-nav-link">Home 02 — Architectural</a>
+        <a href="${root}about.html" class="portal-nav-link">About Company</a>
         <a href="${root}services.html" class="portal-nav-link">Services &amp; Window Styles</a>
         <a href="${root}projects.html" class="portal-nav-link">Completed Projects</a>
         <a href="${root}calculator.html" class="portal-nav-link">Energy Savings Calculator</a>
         <a href="${root}pricing.html" class="portal-nav-link">Pricing &amp; Financing</a>
-        <a href="${root}about.html" class="portal-nav-link">About Company</a>
         <a href="${root}blog.html" class="portal-nav-link">Knowledge Hub (Blog)</a>
         <a href="${root}contact.html" class="portal-nav-link">Contact Us</a>
         <hr style="border: none; border-top: 1px solid var(--color-border); margin-block: 0.5rem;">

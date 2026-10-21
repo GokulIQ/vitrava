@@ -118,6 +118,20 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+.article-points {
+  margin-block: 0.75rem 1.5rem;
+  padding-inline-start: 1.5em;
+  list-style: disc outside;
+}
+
+.article-points > li {
+  padding-inline-start: 0.25em;
+}
+
+.article-points > li + li {
+  margin-block-start: 0.5rem;
+}
+
 a {
   color: inherit;
   text-decoration: none;

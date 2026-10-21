@@ -78,6 +78,8 @@
           </div>
         </div>
 
+        <a href="./about.html" class="nav-link ">About</a>
+
         <!-- Services Dropdown (Services & Styles) -->
         <div class="nav-dropdown">
           <a href="./services.html" class="nav-link ">
@@ -119,7 +121,6 @@
         <a href="./projects.html" class="nav-link ">Projects</a>
         <a href="./calculator.html" class="nav-link ">Calculator</a>
         <a href="./pricing.html" class="nav-link ">Pricing</a>
-        <a href="./about.html" class="nav-link ">About</a>
         <a href="./blog.html" class="nav-link active">Blog</a>
         <a href="./contact.html" class="nav-link ">Contact</a>
         <a href="./dashboard/overview.html" class="nav-link">Dashboard</a>
@@ -178,11 +179,11 @@
       <div style="padding: 1.25rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; overflow-y: auto;">
         <a href="./index.html" class="portal-nav-link">Home 01 — Energy Savings</a>
         <a href="./home-02.html" class="portal-nav-link">Home 02 — Architectural</a>
+        <a href="./about.html" class="portal-nav-link">About Company</a>
         <a href="./services.html" class="portal-nav-link">Services &amp; Window Styles</a>
         <a href="./projects.html" class="portal-nav-link">Completed Projects</a>
         <a href="./calculator.html" class="portal-nav-link">Energy Savings Calculator</a>
         <a href="./pricing.html" class="portal-nav-link">Pricing &amp; Financing</a>
-        <a href="./about.html" class="portal-nav-link">About Company</a>
         <a href="./blog.html" class="portal-nav-link">Knowledge Hub (Blog)</a>
         <a href="./contact.html" class="portal-nav-link">Contact Us</a>
         <hr style="border: none; border-top: 1px solid var(--color-border); margin-block: 0.5rem;">
@@ -209,20 +210,16 @@
   
   <main id="main-content">
     
-  <!-- Section 1: Blog Hero & Live Search -->
+  <!-- Section 1: Blog Hero -->
   <section class="section-spacing-sm" style="background-color: var(--color-surface); border-bottom: 1px solid var(--color-border);">
     <div class="container-custom">
       <div style="max-width: 820px; margin-inline: auto; text-align: center;">
         <span class="badge badge-teal" style="margin-bottom: 1rem;">KNOWLEDGE HUB &amp; GUIDES</span>
         <h1 class="text-h1" style="margin-bottom: 1rem;">The Window Science &amp; Efficiency Hub</h1>
-        <p class="text-lead" style="margin-bottom: 2rem;">
+        <p class="text-lead">
           In-depth technical guides, building science insights, and transparent homeowner advice from Vitrava architectural window engineers.
         </p>
 
-        <!-- Live Search Bar -->
-        <div style="position: relative; max-width: 600px; margin-inline: auto;">
-          <input type="text" id="blog-search-input" class="form-input" placeholder="Search by topic, e.g. U-Factor, triple glazing, drafts, installation..." style="padding: 1rem 1.25rem; font-size: 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);" aria-label="Search blog articles">
-        </div>
       </div>
     </div>
   </section>
@@ -230,6 +227,11 @@
   <!-- Section 2: Filterable Articles Grid -->
   <section class="section-spacing">
     <div class="container-custom">
+      <!-- Live Search Bar -->
+      <div style="position: relative; max-width: 600px; margin-inline: auto; margin-bottom: 2rem;">
+        <input type="text" id="blog-search-input" class="form-input" placeholder="Search by topic, e.g. U-Factor, triple glazing, drafts, installation..." style="padding: 1rem 1.25rem; font-size: 1rem; border-radius: var(--radius-full); box-shadow: var(--shadow-sm);" aria-label="Search blog articles">
+      </div>
+
       <!-- Category Filter Pills -->
       <div class="blog-category-filters" style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
         <button type="button" data-blog-category="all" class="btn btn-secondary btn-sm active">All Articles (9)</button>
